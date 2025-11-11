@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Afifatur Putri Nuraini</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --dark: #0b0c10;
+      --light: #ffffff;
+      --gray: #a5a5a5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--light);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #111317;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: var(--light);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: var(--light);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(180deg, #0b0c10 60%, #10121a);
+      padding: 6rem 1rem 3rem;
+      
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid var(--primary);
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: normal;
+    }
+
+    .typing {
+  color: var(--primary);
+  border-right: 2px solid var(--primary);
+  white-space: normal;
+  display: inline-block;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+    .hero p {
+      max-width: 600px;
+      color: var(--gray);
+      margin: 0 auto 1.5rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: #0950d3;
+    }
+    
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.5;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.hero::before {
+  width: 300px;
+  height: 300px;
+  background: rgba(13,110,253,0.5);
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.hero::after {
+  width: 250px;
+  height: 250px;
+  background: rgba(255,255,255,0.15);
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.hero .bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.4;
+  animation: float 12s infinite ease-in-out alternate;
+}
+
+.hero .circle1 {
+  width: 180px;
+  height: 180px;
+  background: rgba(13,110,253,0.4);
+  top: 60%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.hero .circle2 {
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.2);
+  top: 30%;
+  right: 25%;
+  animation-delay: 4s;
+}
+
+.hero .circle3 {
+  width: 150px;
+  height: 150px;
+  background: rgba(13,110,253,0.3);
+  bottom: 15%;
+  right: 40%;
+  animation-delay: 6s;
+}
+
+
+@keyframes float {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-40px) scale(1.05);
+  }
+}
+
+
+.hero-content, .hero-text, .hero img {
+  position: relative;
+  z-index: 2;
+}
+    
+
+@media (min-width: 1024px) {
+  .hero img {
+    width: 330px;
+    height: 330px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+}
+
+.hero img {
+  position: relative;
+  z-index: 2;
+  animation: glow 3s infinite ease-in-out alternate;
+  box-shadow: 0 0 25px rgba(13,110,253,0.4);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(13,110,253,0.4);
+  }
+  100% {
+    box-shadow: 0 0 35px rgba(13,110,253,0.8);
+  }
+}
+
+
+.hero .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero .particles span {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  animation: move 10s linear infinite;
+}
+
+.hero .particles span:nth-child(odd) {
+  background: rgba(13,110,253,0.5);
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.hero .particles span:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 9s; }
+.hero .particles span:nth-child(2) { left: 15%; animation-delay: 2s; animation-duration: 11s; }
+.hero .particles span:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 8s; }
+.hero .particles span:nth-child(4) { left: 45%; animation-delay: 1s; animation-duration: 10s; }
+.hero .particles span:nth-child(5) { left: 60%; animation-delay: 3s; animation-duration: 9s; }
+.hero .particles span:nth-child(6) { left: 75%; animation-delay: 5s; animation-duration: 12s; }
+.hero .particles span:nth-child(7) { left: 90%; animation-delay: 1.5s; animation-duration: 10s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero img,
+.hero-text h1,
+.hero-text p,
+.hero-text a {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero img { animation-delay: 0.2s; }
+.hero-text h1 { animation-delay: 0.5s; }
+.hero-text p { animation-delay: 0.8s; }
+.hero-text a { animation-delay: 1s; }
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 1rem;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      color: var(--gray);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #1a1c22;
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(13,110,253,0.3);
+    }
+    
+  
+
+.b-biodata {
+  padding: 6rem 2rem;
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: 'Poppins', sans-serif;
+}
+
+.b-biodata-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.b-biodata-image {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.b-biodata-image img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.b-biodata-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.b-biodata-info {
+  flex: 2 1 450px;
+}
+
+.b-biodata-info h2 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.b-biodata-info p {
+  margin-bottom: 0.8rem;
+  line-height: 1.7;
+  color: var(--light);
+  font-size: 1rem;
+}
+
+.b-biodata-info p span {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+  .b-biodata-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .b-biodata-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .b-biodata-info {
+    flex: 1 1 100%;
+  }
+
+  .b-biodata-info h2 {
+    font-size: 2rem;
+  }
+
+  .b-biodata-info p {
+    font-size: 0.95rem;
+  }
+}
+    
+.pendidikan {
+  background: #0a0f1c; 
+  padding: 90px 20px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.pendidikan::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, rgba(0, 122, 255, 0.15), transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.pendidikan .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4da6ff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 30px 25px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(0, 100, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(77, 166, 255, 0.4);
+  border-color: rgba(77, 166, 255, 0.3);
+}
+
+.edu-icon {
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 55px;
+  min-height: 55px;
+  box-shadow: 0 0 15px rgba(0, 122, 255, 0.4);
+}
+
+.edu-content h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.edu-year {
+  color: #4da6ff;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.edu-major {
+  font-weight: 500;
+  color: #cddcff;
+  margin-bottom: 8px;
+}
+
+.edu-desc {
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .edu-card {
+    flex-direction: column;
+    text-align: left;
+  }
+  .edu-icon {
+    margin-bottom: 10px;
+  }
+}
+
+    /* Materi Cards */
+    .materi .card i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      transition: 0.3s;
+    }
+
+    .materi .card:hover i.fa-html5 {
+      color: #ff4500;
+    }
+
+    .materi .card:hover i.fa-css3-alt {
+      color: #00aaff;
+    }
+
+    .tugas .card img {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+    .tugas .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    
+.lihat-selengkapnya {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-lihat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary), #2563eb);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(59,76,202,0.15);
+  transition: all 0.25s ease;
+}
+
+.btn-lihat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(59,76,202,0.25);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.btn-lihat i {
+  transition: transform 0.25s ease;
+}
+
+.btn-lihat:hover i {
+  transform: translateX(4px);
+}
+
+    .skill .skill-bar {
+      margin-bottom: 1rem;
+    }
+
+    .skill .label {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .skill .progress {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .skill .progress div {
+      height: 10px;
+      background: var(--primary);
+    }
+
+    .skill-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-images img {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      transition: 0.3s;
+      /* object-fit: cover; */
+    }
+
+    .skill-images img:hover {
+      transform: scale(1.03);
+    }
+    
+
+.experience {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 1rem;
+  position: relative;
+}
+
+.experience h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  margin: auto;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light);
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(13,110,253,0.6);
+  z-index: 10;
+}
+
+.timeline-content {
+  background: #1a1c22;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(13,110,253,0.3);
+}
+
+.timeline-content h3 {
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.timeline-content span {
+  display: block;
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.timeline-content p {
+  color: var(--light);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    text-align: left;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    transform: translateY(-50%);
+  }
+}
+
+.values {
+  background: linear-gradient(180deg, #0b0c10 0%, #10121a 100%);
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 2.4rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.values h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.values-intro {
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0.5rem auto 3rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(13, 110, 253, 0.15);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 0 rgba(13,110,253,0);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(13,110,253,0.2);
+  border-color: rgba(13,110,253,0.5);
+}
+
+.icon-wrapper {
+  background: rgba(13,110,253,0.1);
+  border: 1px solid rgba(13,110,253,0.3);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  transition: all 0.4s ease;
+}
+
+.value-card:hover .icon-wrapper {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.value-card h3 {
+  color: var(--light);
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.5px;
+}
+
+.value-card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .values h2 {
+    font-size: 1.9rem;
+  }
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.7rem;
+  }
+}
+
+    /* Portfolio Section */
+    .portfolio .card img {
+      width: 100%;
+      height: 240px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* GALERI */
+    .galeri {
+  background-color: var(--dark);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.galeri h2 {
+  text-align: center;
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+}
+
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.galeri-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeri-item:hover {
+  transform: scale(1.03);
+}
+
+.galeri-item img {
+  width: 100%;
+  height: 220px;
+  /* object-fit: cover; */
+  display: block;
+}
+
+    /* FAQ */
+    .faq details {
+      background: #1a1c22;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+/* CONTACT SECTION */
+.contact {
+  background: linear-gradient(180deg, #0a0d14 0%, #10121b 100%);
+  padding: 6rem 1.5rem;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(13,110,253,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #b0b3c1;
+  font-size: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* Info Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(13,110,253,0.25);
+  border-radius: 16px;
+  padding: 1.2rem 1rem;
+  transition: 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 0 rgba(13,110,253,0);
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(13,110,253,0.6);
+  box-shadow: 0 0 30px rgba(13,110,253,0.25);
+}
+
+.info-box i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  min-width: 35px;
+}
+
+.info-box h4 {
+  font-weight: 600;
+  color: #fff;
+}
+
+.info-box p {
+  color: #b0b3c1;
+  font-size: 0.95rem;
+}
+
+.info-box a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-box a:hover {
+  color: #68a8ff;
+}
+
+/* Form Section */
+.contact-form {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(13,110,253,0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(13,110,253,0.1);
+  transition: 0.3s ease;
+}
+
+.contact-form:hover {
+  box-shadow: 0 0 40px rgba(13,110,253,0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 12px rgba(13,110,253,0.3);
+}
+
+.btn-send {
+  width: 100%;
+  background: linear-gradient(90deg, #0d6efd, #0056d4);
+  border: none;
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-send:hover {
+  background: linear-gradient(90deg, #0b5ed7, #0043b5);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(13,110,253,0.4);
+}
+
+    footer {
+      background: #10121a;
+      text-align: center;
+      padding: 2rem;
+      color: var(--gray);
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #111317;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Afifatur Portfolio</div>
+      <i class="fas fa-bars menu-toggle"></i>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#skill">Skill</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="particles">
+  <span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+</div>
+    <div class="bg-circle circle1"></div>
+<div class="bg-circle circle2"></div>
+<div class="bg-circle circle3"></div>
+    <div class="hero-content">
+      <img src="Afif.jpg" alt="Profil">
+      <div class="hero-text">
+        <h1><span class="typing"></span></h1>
+        <p>Siswa SMAN 1 Mojokerto dengan jurusan IPA Informatika. Saya memiliki passion dalam teknologi dan pengembangan web.</p>
+        <a href="#about" class="btn-primary">Lihat Selengkapnya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section class="about" id="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seseorang yang memiliki semangat tinggi untuk belajar dan mengembangkan kemampuan di dunia digital, khususnya desain web dan teknologi kreatif.</p>
+    <div class="card-container">
+      <div class="card">Kreatif</div>
+      <div class="card">Disiplin</div>
+      <div class="card">Kerja Tim</div>
+    </div>
+  </section>
+  
+  
+  <section class="b-biodata">
+  <div class="b-biodata-container">
+    <div class="b-biodata-image">
+      <img src="Afif.jpg" alt="Foto Biodata">
+    </div>
+    <div class="b-biodata-info">
+     <!--  <h2>Afifatur Putri Nuraini</h2> -->
+      <p><span>Nama:</span> Afifatur Putri Nuraini</p>
+      <p><span>Tempat, Tanggal Lahir:</span> Mojokerto, 1 Juli 2007</p>
+      <p><span>Agama:</span> Islam</p>
+      <p><span>Alamat:</span> Jl. Meri, Kelurahan Meri</p>
+      <p><span>Hobi:</span> Menggambar, Melukis</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Pendidikan Sectionl -->
+<section id="pendidikan" class="pendidikan section">
+  <div class="container">
+    <h2 class="section-title">Pendidikan</h2>
+    <p class="section-subtitle">Riwayat pendidikan yang telah saya tempuh</p>
+
+    <div class="education-container">
+      <div class="edu-card">
+        <div class="edu-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="edu-content">
+          <h3>SMA Negeri 1 Mojokerto </h3>
+          <p class="edu-year">2023 - 2026</p>
+          <p class="edu-major">jurusan Ipa Informatika</p>
+          <p class="edu-desc">
+            Jurusan IPA Informatika mempelajari sains dan dasar teknologi seperti pemrograman serta jaringan komputer.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-icon">
+          <i class="fa-solid fa-school"></i>
+        </div>
+        <div class="edu-content">
+          <h3>SMP Negeri 5 Mojokerto</h3>
+          <p class="edu-year">2020 - 2023</p>
+          <p class="edu-major">Pendidikan Umum</p>
+          <p class="edu-desc">
+            Menumbuhkan rasa disiplin, kerja sama, dan kemampuan akademik untuk melanjutkan ke jenjang pendidikan yang lebih tinggi.
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <div class="edu-content">
+          <h3>SDN Meri 2 Mojokerto</h3>
+          <p class="edu-year">2014 - 2020</p>
+          <p class="edu-major">Sekolah Dasar</p>
+          <p class="edu-desc">
+            Awal pembentukan karakter, dasar pengetahuan, dan keterampilan literasi yang menjadi pondasi pendidikan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Materi -->
+  <section class="materi" id="materi">
+    <h2>Materi yang Dipelajari</h2>
+    <div class="card-container">
+      <div class="card">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML</h3>
+        <p>Struktur dasar untuk membuat tampilan halaman web.</p>
+      </div>
+      <div class="card">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h3>CSS</h3>
+        <p>Bahasa desain yang membuat tampilan web lebih menarik dan profesional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tugas -->
+  <section class="tugas" id="tugas">
+    <h2>Tugas Pembelajaran</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="tugashtml1.jpg" alt="Tugas HTML">
+        <h3>Tugas HTML</h3>
+        <p>Membuat tabel HTML sederhana dengan kolom dan baris sesuai kebutuhan konten.</p>
+        <div class="lihat-selengkapnya">
+    <a href="tugas.html" class="btn-lihat">
+      <i class="fa-solid fa-arrow-right"></i> Lihat Selengkapnya
+    </a>
+  </div>
+      </div>
+      <div class="card">
+        <!-- <img src="https://via.placeholder.com/400x250" alt="Tugas CSS"> -->
+        <h3>Tugas CSS</h3>
+        <p>Menerapkan gaya visual seperti warna, tata letak, dan animasi sederhana menggunakan CSS.</p>
+<!--         <div class="lihat-selengkapnya">
+    <a href="tugas-css.html" class="btn-lihat"> -->
+<!--       <i class="fa-solid fa-arrow-right"></i> Lihat Selengkapnya -->
+    </a>
+  </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill -->
+  <section class="skill" id="skill">
+    <h2>Skill</h2>
+    <div class="skill-bar">
+      <div class="label"><span>Melukis</span><span>88%</span></div>
+      <div class="progress"><div style="width:88%"></div></div>
+    </div>
+    <div class="skill-bar">
+      <div class="label"><span>Menggambar</span><span>83%</span></div>
+      <div class="progress"><div style="width:83%"></div></div>
+    </div>
+
+    <div class="skill-images">
+      <img src="lukisan1.jpg" alt="Skill 1">
+      <img src="lukisan2.jpg" alt="Skill 2">
+      <img src="lukisan3.jpg" alt="Skill 3">
+    </div>
+  </section>
+  
+<!-- Pengalaman -->
+<section class="experience" id="experience">
+  <h2>Pengalaman</h2>
+  <div class="timeline">
+    
+    <div class="timeline-item left">
+      <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+      <div class="timeline-content">
+        <h3>Ekstra Baca Tulis Al-Quran (BTA)</h3>
+        <span>2024 - 2025</span>
+        <p>Ekstra BTA bertujuan melatih siswa membaca dan menulis Al-Qur’an dengan baik serta menanamkan nilai islami.</p>
+      </div>
+    </div>
+
+<div class="timeline-item right">
+  <div class="timeline-dot"><i class="fa-solid fa-paintbrush"></i></div>
+  <div class="timeline-content">
+    <h3>Lomba Gambar Poster</h3>
+    <span>2019</span>
+    <p>Mengikuti lomba gambar poster saat ulang tahun Kota Mojokerto. Gambar menampilkan beberapa orang merayakan acara di depan gapura kota.</p>
+  </div>
+</div>
+
+<div class="timeline-item left">
+  <div class="timeline-dot"><i class="fa-solid fa-paintbrush"></i></div>
+  <div class="timeline-content">
+    <h3>Lomba Gambar Batik</h3>
+    <span>2023</span>
+    <p>Mengikuti lomba gambar batik di Alun-Alun Kota Mojokerto. Membuat motif batik dengan pola dan warna khas daerah.</p>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+<!-- Nilai & Prinsip Hidup -->
+<section class="values" id="values">
+  <h2>Nilai & Prinsip Hidup</h2>
+  <p class="values-intro">Prinsip yang selalu saya pegang dalam berkarya dan berinteraksi, menjadi fondasi dalam setiap langkah yang saya ambil.</p>
+
+  <div class="values-container">
+    <div class="value-card">
+      <div class="icon-wrapper"><i class="fa-solid fa-heart"></i></div>
+      <h3>Keikhlasan</h3>
+      <p>Segala hal yang saya lakukan berlandaskan keikhlasan, karena hasil terbaik datang dari niat yang tulus.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon-wrapper"><i class="fa-solid fa-handshake"></i></div>
+      <h3>Tanggung Jawab</h3>
+      <p>Setiap pekerjaan saya usahakan dilakukan dengan penuh tanggung jawab dan dedikasi tinggi.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon-wrapper"><i class="fa-solid fa-lightbulb"></i></div>
+      <h3>Kreativitas</h3>
+      <p>Saya percaya setiap ide memiliki potensi besar jika dikembangkan dengan semangat dan ketekunan.</p>
+    </div>
+
+    <div class="value-card">
+      <div class="icon-wrapper"><i class="fa-solid fa-users"></i></div>
+      <h3>Kerja Sama</h3>
+      <p>Kolaborasi dan saling menghargai menjadi dasar utama dalam setiap proyek yang saya kerjakan.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="portfolio1.jpg" alt="Proyek 1">
+        <h3>Desain Website Portfolio</h3>
+        <p>Proyek portofolio dengan tema gelap profesional, menampilkan profil dan karya.</p>
+      </div>
+      <div class="card">
+        <img src="portfolio2.jpg" alt="Proyek 2">
+        <h3>Lampu Lalu Lintas</h3>
+        <p>Lampu lalu lintas otomatis berbasis Arduino, lampu hijau, kuning, dan merah menyala bergantian sesuai waktu.</p>
+      </div>
+      <div class="card">
+        <img src="portfolio3.jpg" alt="Proyek 3">
+        <h3>Saklar LED Merah dan Biru</h3>
+        <p>Rangkaian ini terdiri dari dua tombol dan dua lampu LED. Tombol merah mengontrol lampu merah, dan tombol biru mengontrol lampu biru secara bergantian (on/off).</p>
+      </div>
+    </div>
+  </section>
+  
+ 
+  <!-- GALERI -->
+  <section id="galeri" class="galeri">
+  <h2>Galeri</h2>
+  <div class="galeri-container">
+    <div class="galeri-item">
+      <img src="galeri1.jpg" alt="Galeri 1">
+    </div>
+    <div class="galeri-item">
+      <img src="galeri2.jpg" alt="Galeri 2">
+    </div>
+    <div class="galeri-item">
+      <img src="galeri3.jpg" alt="Galeri 3">
+    </div>
+    <div class="galeri-item">
+      <img src="galeri4.jpg" alt="Galeri 4">
+    </div>
+    <div class="galeri-item">
+      <img src="galeri5.jpg" alt="Galeri 4">
+    </div>
+    <div class="galeri-item">
+      <img src="galeri6.jpg" alt="Galeri 4">
+    </div>
+  </div>
+</section>
+  
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <h2>FAQ</h2>
+      <div class="seluruh_faq">
+        <details>
+        <summary>Bagaimana cara saya menghubungi Anda?</summary>
+        <p>Anda dapat menghubungi saya melalui form kontak di bawah ini atau melalui email yang tertera.</p>
+      </details>
+      <details>
+  <summary>Apakah saya bisa bekerja sama?</summary>
+  <p>Tentu! Saya senang bekerja sama dalam kegiatan sekolah, lomba, atau kegiatan kreatif lainnya untuk menambah pengalaman dan wawasan.</p>
+</details>
+      </div>
+      
+  </section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Hubungi Saya</h2>
+    <p class="section-subtitle">
+      Tertarik berkolaborasi atau ingin tahu lebih banyak? Jangan ragu untuk menghubungi saya melalui form di bawah ini.
+    </p>
+
+    <div class="contact-wrapper">
+      <!-- Info -->
+      <div class="contact-info">
+        <div class="info-box">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h4>WhatsApp</h4>
+            <p><a href="https://wa.me/62895331139984?text=Selamat%20%5Bpagi%2Fsiang%2Fsore%2Fmalam%5D%2C%20saya%20%5Bnama%20Anda%5D.%20Saya%20ingin%20menanyakan%20mengenai%20%5Btujuan%20Anda%5D.%20Terima%20kasih%20atas%20waktunya." 
+target="_blank">+62 895-3311-39984</a></p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:afifaturbukaji@gmail.com">afifaturbukaji@gmail.com</a></p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h4>Lokasi</h4>
+            <a href="https://maps.app.goo.gl/3mfUCM9LRDJDTxjc8?g_st=ac">Jl. Meri Kuwung, Kelurahan Meri</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="contact-form" id="whatsappForm">
+        <div class="form-group">
+          <input id="nama" type="text" placeholder="Nama Lengkap" required>
+        </div>
+        <div class="form-group">
+          <input id="email" type="email" placeholder="Alamat Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+        </div>
+        <button type="submit" class="btn-send">
+          <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Afifatur Putri Nuraini. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const text = "Halo, saya Afifatur Putri Nuraini";
+    let index = 0;
+    const typingElement = document.querySelector(".typing");
+
+    function type() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+    type();
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll("nav ul li a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+    });
+    
+    
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Ambil data dari input
+  const nama = document.getElementById('nama').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const pesan = document.getElementById('pesan').value.trim();
+
+
+  const nomorWA = '62895331139984';
+
+
+  const template = 
+`*Formulir Kontak Baru 🚀*
+───────────────────────
+👤 *Nama:* ${nama}
+📧 *Email:* ${email}
+💬 *Pesan:* 
+${pesan}
+───────────────────────
+_Dikirim dari form kontak website_`;
+
+  const encoded = encodeURIComponent(template);
+  const waUrl = `https://wa.me/${nomorWA}?text=${encoded}`;
+
+  window.open(waUrl, '_blank');
+
+  this.reset();
+});
+  </script>
+</body>
+</html>
